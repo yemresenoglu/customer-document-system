@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'customer-document-system'
+    container_name: friendly_wozniak
+    ports:
+      - "8090:8082"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: postgres
+      POSTGRES_DB: DocumentDB
+
+
